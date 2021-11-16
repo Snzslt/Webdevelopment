@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="maincss.css">
+
+    <!-- JS -->
+    <script src="mainscript.js"></script>
+
+
+
+    <script type="text/javascript">
+
+
+        function SetCookies() {
+            document.cookie = "Cname=" + '' + document.getElementById("Cname").value +
+                "|Tname=" + document.getElementById("Tname").value +
+                "|hour=" + document.getElementById("hour").value;
+            //alert(document.cookie);
+        }
+
+        function GetCookies() {
+            var arr = document.cookie.split('|');
+            alert(arr.length);
+            var string;
+            for (var i = 0; i < arr.length; i++) {
+                var sarr = arr[i].split('=');
+                document.getElementById(sarr[0]).innerText = sarr[1];
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+
+    <!-- Form -->
+    <form action="confirmhtml.html" method="get" target="_blank" onsubmit="SetCookies()" style="margin-top:6%">
+        <div>
+            <input type="hidden" id="id">
+            <input type="text" placeholder="Course Name" id="Cname" class="form-control">
+            <input type="text" placeholder="Teacher Name" id="Tname" class="form-control">
+            <input type="text" placeholder="Total of Hours" id="hour" class="form-control">
+
+            <button class="btn btn-primary" id="btnregister" onclick="register()">Register</button>
+            <button class="btn btn-primary" id="btnconfirm" onclick="window.open('confirmhtml.html')" type="submit">Confirmation</button>
+            <button class="btn btn-warning" id="btnedit" onclick="edit()">Save Change</button>
+            <button class="btn btn-danger" id="btnremove" onclick="remove()">Remove</button>
+            <button class="btn btn-secondary" id="btncancel" onclick="ddl()">Cancel</button>
+        </div>
+    </form>
+
+
+    <!-- Table -->
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Uniqe Code</th>
+                <th>Course Name</th>
+                <th>Teacher Name</th>
+                <th>Total of Hours</th>
+                <th>Select</th>
+            </tr>
+        </thead>
+
+        <tbody id="table1"></tbody>
+    </table>
+
+</body>
+
+</html>

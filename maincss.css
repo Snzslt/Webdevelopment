@@ -1,0 +1,15 @@
+﻿div {
+    width: 50%;
+    margin: 30px auto;
+}
+
+input {
+    margin-bottom: 10px;
+}
+
+#btnedit,
+#btnremove,
+#btncancel,
+#btnconfirm {
+    display: none;
+}

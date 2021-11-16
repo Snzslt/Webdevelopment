@@ -1,0 +1,9 @@
+Hello Alex 
+I tried to open Omnivox but it seems that it has a trouble.
+so i will send you a url of my file.
+I hope you are doing well.
+i just wanted to say a bit of explanation about my project. you have to start with the home.html the page created responsive with Bootstrap and the button "click for fun" and "login" works .
+it was my plan to do the hole project but the lack of time didn't allowed me , form the button login you will go to login page and can login and do the javascript and form there ...
+Thanks for every thing and your class .You are full of energy please stay like this for your hole life.I learn too much from you:)
+Regards
+Zahra
